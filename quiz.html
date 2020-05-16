@@ -4,17 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Timed Quiz</title>
+    <title>Coding Quiz</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body>  
-    <h1 class="time"></h1>
-    <div id = "question">
-    <h2>Inside which HTML element do you put the javascript?</h2>
-        <li class = "qlist"><button class = "wrong switch"> &#60javascript&#62 </button></li>
-        <li class = "qlist"><button class = "wrong switch"> &#60js&#62 </button></li>
-        <li class = "qlist"><button class = "wrong switch"> &#60scripting&#62 </button></li>
-        <li class = "qlist"><button class = "correct switch"> &#60script&#62 </button></li>
+<body> 
+    <div class = "container">
+    <div id = "start">
+        <h1>Code Quiz Challenge</h1>
+        <p>Welcome to the Code Quiz.  You will be presented with a series of multiple choice questions that must be answered in 1 minute. Click the button below to begin</p>
+        <button id ="myButton">Start Quiz</button>
+        
     </div>
-    <script src="./script.js"></script>
+
+    <div id = "timer" style="display: none;"><h1 class="time"></h1></div>
+    <div id = "quiz" style="display: none;">
+        <div id = "question"><h2> </h2></div>
+        <div id = "answers">
+            <div class = "choice" id = "A" onclick="checkAnswer('A')"> </div>
+            <div class = "choice" id = "B" onclick="checkAnswer('B')"> </div>
+            <div class = "choice" id = "C" onclick="checkAnswer('C')"> </div>
+            <div class = "choice" id = "D" onclick="checkAnswer('D')"> </div>
+        </div>
+        <div id = "rightWrong"></div>
+    </div>
+
+    <div id="scorepage" style="display : none;">
+        <div id = "scorealert"><h2></h2></div>
+        <div id = "form"></div>
+        <form id = "scoreForm">
+            <label for="fname">Enter Your Name to Record Your Score:</label>
+            <input type="text" id="name" name="fname"><br><br>
+             <button id = "submitbutton">Submit</button>
+          </form>
+          <h3>High Scores</h3>
+          <ul id="score-list"></ul>
+    </div>
+    </div>
+    </div>
+   <script src="./script.js"></script>
 </body>
 </html>

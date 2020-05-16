@@ -1,0 +1,61 @@
+
+h1{
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+}
+
+p{
+    text-align: center
+
+}
+
+.container{
+    margin-top: 50px;
+    margin-left: 15%;
+    margin-right: 15%;
+    padding: 10%;
+    border-style: outset;
+    background-color: white;
+}
+
+.choice{
+    text-align: center;
+    padding-top: 1em; 
+    background-color: deeppink;
+    color: cornsilk;
+    border: cornsilk;
+    width: 200px; word-wrap: break-word;
+    height: 30px;
+    margin-top: 5px;
+    border-radius: 40px;
+
+}
+
+#rightWrong {
+    visibility: hidden;
+    }
+  #rightWrong.inital{
+      visibility: hidden;
+  }
+  
+  #rightWrong.correct,
+  #rightWrong.wrong {
+    visibility: visible;
+  }
+  
+  #rightWrong.correct {
+    color: #52b155;
+  }
+  
+  #rightWrong.wrong {
+    color: #e6252c;
+  }
+
+body{
+    background-image: url(javascript.jpg);
+    opacity: 0.9;
+    z-index: 1;
+}
